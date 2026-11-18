@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080817" />
+  <meta name="description" content="Rahul Kumar — Software Engineering Student, Developer and Problem Solver." />
+  <title>Certifications | Rahul Kumar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Rahul Kumar home">Rahul <span>Kumar</span><i>.</i></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+<a href="index.html#about">About</a>
+<a href="projects.html">Projects</a>
+<a href="skills.html">Skills</a>
+<a href="certifications.html" class="active" aria-current="page">Certifications</a>
+<a href="education.html">Education</a>
+<a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-socials" aria-label="Social links">
+        <a href="https://www.linkedin.com/in/rahul-maheshwari-7375152b0" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 3.5a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4ZM3.4 9.5H7v11H3.4v-11Zm5.8 0h3.4V11h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.3 4.3 5.3v6.1h-3.6v-5.4c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9v5.5H9.2v-11Z"/></svg>
+        </a>
+        <a href="https://github.com/rahulkumar10319" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.7 2.1 3.8 1.5.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2v3c0 .3.2.7.8.6A11.1 11.1 0 0 0 12 .9Z"/></svg>
+        </a>
+        <a href="mailto:rahulkella661@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 5.5h18.4c.8 0 1.4.6 1.4 1.4v10.2c0 .8-.6 1.4-1.4 1.4H2.8c-.8 0-1.4-.6-1.4-1.4V6.9c0-.8.6-1.4 1.4-1.4Zm9.2 7.1 8.1-5.3H3.9l8.1 5.3Zm-8.5 4.1h17V9l-8.1 5.2a.8.8 0 0 1-.8 0L3.5 9v7.7Z"/></svg>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="certs-page container" id="certifications">
+      <header class="skills-hero">
+        <p class="section-kicker">CERTIFICATIONS &amp; ACHIEVEMENTS</p>
+        <h1>Learning <span class="grad-a">Beyond</span> the <span class="grad-b">Classroom</span></h1>
+        <p class="certs-sub">A Small Selection of <span class="grad-a">Certifications</span></p>
+      </header>
+      <ul class="cert-grid" id="certGrid" aria-label="Certifications"></ul>
+      <noscript><p class="certs-sub">Please enable JavaScript to view the certifications.</p></noscript>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbTitle" hidden>
+    <div class="lb-backdrop" data-close></div>
+    <div class="lb-panel" id="lbPanel">
+      <button class="lb-close" type="button" aria-label="Close" data-close>&times;</button>
+      <div class="lb-stage">
+        <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous certificate">&#8249;</button>
+        <div class="lb-media"><img id="lbImg" alt="" /></div>
+        <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next certificate">&#8250;</button>
+      </div>
+      <div class="lb-info">
+        <div class="lb-text">
+          <h2 id="lbTitle"></h2>
+          <p id="lbSub"></p>
+          <div class="lb-dots" id="lbDots" aria-hidden="true"></div>
+        </div>
+        <a class="lb-visit" id="lbVisit" href="#" target="_blank" rel="noopener noreferrer">View Certificate <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand-block">
+        <a class="brand footer-brand" href="index.html">Rahul <span>Kumar</span><i>.</i></a>
+        <p>Turning ideas into scalable software.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Explore Sections</h4>
+        <div class="footer-nav">
+<a href="index.html#about">About</a>
+<a href="projects.html">Projects</a>
+<a href="skills.html">Skills</a>
+<a href="certifications.html">Certifications</a>
+<a href="education.html">Education</a>
+<a href="contact.html">Contact</a>
+          </div>
+      </div>
+      <div class="footer-column">
+        <h4>Connect</h4>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/rahul-maheshwari-7375152b0" target="_blank" rel="noreferrer"><span class="social-icon">in</span> LinkedIn</a>
+          <a href="https://github.com/rahulkumar10319" target="_blank" rel="noreferrer"><span class="social-icon"><svg viewBox="0 0 24 24"><path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.7 2.1 3.8 1.5.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.3.8 1 .8 2v3c0 .3.2.7.8.6A11.1 11.1 0 0 0 12 .9Z"/></svg></span> GitHub</a>
+          <a href="mailto:rahulkella661@gmail.com"><span class="social-icon">✉</span> Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Rahul Kumar. Turning ideas into scalable software.</span>
+      <a href="#">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="certifications.js"></script>
+</body>
+</html>
