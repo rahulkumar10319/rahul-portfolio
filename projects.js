@@ -2,9 +2,9 @@
 // Projects page. Edit the PROJECTS list to add / change projects.
 //  type: "github" -> button says "View on GitHub", "figma" -> "View Prototype",
 //        "live"   -> "Visit Live Site"
-//  tech: icon file names inside assets/icons/ (without .svg)
+//  tech: icon file names inside  (without .svg)
 // ------------------------------------------------------------------
-const PR = "assets/projects/";
+const PR = "";
 const PROJECTS = [
   {
     title: "RemoteWork Solutions",
@@ -57,7 +57,7 @@ const PROJECTS = [
         <span class="project-desc"></span>
       </span>
       <span class="project-foot">
-        <span class="project-tech">${p.tech.map(t => `<i title="${t[1]}"><img src="assets/icons/${t[0]}.svg" alt="${t[1]}" /></i>`).join("")}</span>
+        <span class="project-tech">${p.tech.map(t => `<i title="${t[1]}"><img src="${t[0]}.svg" alt="${t[1]}" /></i>`).join("")}</span>
         <span class="project-link">${LABEL[p.type]} ${ARROW}</span>
       </span>`;
     a.querySelector("strong").textContent = p.title;

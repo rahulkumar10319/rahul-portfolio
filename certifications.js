@@ -5,7 +5,7 @@
 //  - A card with SEVERAL items opens together; use the arrows to move.
 //  - `link` is where "View Certificate" goes (leave it out to hide the button).
 // ------------------------------------------------------------------
-const P = "assets/certs/";
+const P = "";
 const CERTS = [
   {
     title: "KPT Internship Certificate", sub: "45-Day Internship at Karachi Port Trust",

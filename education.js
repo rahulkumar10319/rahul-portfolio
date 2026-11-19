@@ -1,6 +1,6 @@
 // Education page photo gallery. Edit PHOTOS to add / reorder photos.
 // `shape`: "l" = landscape thumbnail, "p" = portrait thumbnail (full photo shows when opened).
-const E = "assets/education/";
+const E = "";
 const PHOTOS = [
   { img: E + "hackathon-runner-up.webp", shape: "l", title: "ZAB E-FEST 2025", sub: "Debugging Competition — Runner-Up", color: "#fbbf24" },
   { img: E + "szabist-building.webp", shape: "p", title: "SZABIST University", sub: "Karachi campus", color: "#38bdf8" },
